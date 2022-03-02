@@ -1,0 +1,68 @@
+XML pour les tâches
+<task name="Exemple de tache">
+	<global_values>
+		<bruit quantity=?/>
+		<chocs quantity=?/>
+		<facilite_prise quantity=?/>
+		<objet_en_mouvement quantity=?/>
+		<accessibilite quantity=?/>
+		<vibrations quantity=?/>
+		...
+	</global_values>
+	<frames sample_time=?>
+		<frame phi_13=? theta_13=? psi_13=? phi_2a3=? theta_2a3=? phi_4a2a=? theta_4a2a=? psi_4a2a=? phi_2b3=? theta_2b3=? phi_4b2b=? theta_4b2b=? psi_4b2b=? phi_7a3=? theta_7a3=? psi_7a3=? phi_7b3=? theta_7b3=? psi_7b3=? theta_5a4a=? theta_5b4b=? phi_6a5a=? theta_6a5a=? phi_6b5b=? theta_6b5b=? phi_8a7a=? theta_8a7a=? psi_8a7a=? phi_8b7b=? theta_8b7b=? psi_8b7b=? theta_9a8a=? psi_9a8a=? theta_9b8b=? psi_9b8b=? phi_10a9a=? theta_10a9a=? psi_10a9a=? psi_10a9a=? phi_10b9b=? theta_10b9b=? psi_10b9b=?/>
+		<frame phi_13=? theta13=? ... />
+		...
+	</frames>
+</task>
+
+XML pour l'"assemblage" des tâches
+<shift name="Exemple de shift">
+	<cycles>
+		<cycle name="Exemple de cycle 1" rep=?>
+			<tasks>
+				<task name="Exemple de tâche 1" path="Chemin d'accès du XML 1" rep=?/>
+				<task name="Exemple de tâche 2" path="Chemin d'accès du XML 2" rep=?/>
+				...
+				<task name="Exemple de tâche N" path="Chemin d'accès du XML N" rep=?/>
+			</tasks>
+		</cycle>
+		<cycle name="Exemple de cycle 2" rep=?>
+			...
+		</cycle>
+	</cycles>
+</shift>
+		
+		
+Version #2 en un seul XML
+<shift name="Exemple de shift">
+	<cycles>
+		<cycle name="Exemple de cycle 1" rep=?>
+			<tasks>
+				<task name="Exemple de tache 1" rep=?>
+					<global_values>
+						<bruit quantity=?/>
+						<chocs quantity=?/>
+						<facilite_prise quantity=?/>
+						<objet_en_mouvement quantity=?/>
+						<accessibilite quantity=?/>
+						<vibrations quantity=?/>
+						...
+					</global_values>
+					<frames sample_time=?>
+						<frame phi_13=? theta_13=? psi_13=? phi_2a3=? theta_2a3=? phi_4a2a=? theta_4a2a=? psi_4a2a=? phi_2b3=? theta_2b3=? phi_4b2b=? theta_4b2b=? psi_4b2b=? phi_7a3=? theta_7a3=? psi_7a3=? phi_7b3=? theta_7b3=? psi_7b3=? theta_5a4a=? theta_5b4b=? phi_6a5a=? theta_6a5a=? phi_6b5b=? theta_6b5b=? phi_8a7a=? theta_8a7a=? psi_8a7a=? phi_8b7b=? theta_8b7b=? psi_8b7b=? theta_9a8a=? psi_9a8a=? theta_9b8b=? psi_9b8b=? phi_10a9a=? theta_10a9a=? psi_10a9a=? psi_10a9a=? phi_10b9b=? theta_10b9b=? psi_10b9b=?/>
+						<frame phi_13=? theta13=? ... />
+						...
+					</frames>
+				</task>
+				...
+				<task name="Exemple de tâche N" rep=?>
+					...
+				</task>
+			</tasks>
+		</cycle>
+		<cycle name="Exemple de cycle 2" rep=?>
+			...
+		</cycle>
+	</cycles>
+</shift>
