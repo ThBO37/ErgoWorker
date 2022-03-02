@@ -1,0 +1,15 @@
+<shift name="Exemple de shift">
+	<cycles>
+		<cycle name="Exemple de cycle 1" rep=?>
+			<tasks>
+				<task name="Exemple de tâche 1" path="Chemin d'accès du XML 1" rep=?/>
+				<task name="Exemple de tâche 2" path="Chemin d'accès du XML 2" rep=?/>
+				...
+				<task name="Exemple de tâche N" path="Chemin d'accès du XML N" rep=?/>
+			</tasks>
+		</cycle>
+		<cycle name="Exemple de cycle 2" rep=?>
+			...
+		</cycle>
+	</cycles>
+</shift>
